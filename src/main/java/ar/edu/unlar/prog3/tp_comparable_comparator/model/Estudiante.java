@@ -1,6 +1,6 @@
-package ar.edu.unlar.prog3.model;
+package ar.edu.unlar.prog3.tp_comparable_comparator.model;
 
-public class Estudiante {
+public class Estudiante implements Comparable<Estudiante> {
 
     private String legajo;
     private String nombre;
@@ -69,4 +69,8 @@ public class Estudiante {
                 ", cantidadMateriasAprobadas=" + cantidadMateriasAprobadas +
                 '}';
     }
+    @Override
+public int compareTo(Estudiante otro) {
+    return Double.compare(otro.getPromedio(), this.getPromedio());
+}
 }
