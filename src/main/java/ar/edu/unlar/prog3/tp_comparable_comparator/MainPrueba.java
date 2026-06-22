@@ -55,5 +55,16 @@ lista.forEach(System.out::println);
 System.out.println("\n=== Materias descendente y nombre ===");
 lista.sort(ComparadoresEstudiante.porMateriasDescYNombre);
 lista.forEach(System.out::println);
+
+System.out.println("\n=== Ejercicio 6 ===");
+
+int numeroGrande = Integer.MAX_VALUE;
+int numeroPequenio = -1;
+
+System.out.println("Comparación usando resta:");
+System.out.println(numeroGrande - numeroPequenio);
+
+System.out.println("Comparación usando Integer.compare:");
+System.out.println(Integer.compare(numeroGrande, numeroPequenio));
     }
 }
