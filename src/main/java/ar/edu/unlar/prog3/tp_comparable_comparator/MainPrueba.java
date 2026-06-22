@@ -41,8 +41,19 @@ public class MainPrueba {
          lista.forEach(System.out::println);
 
                System.out.println("\n=== Orden por materias aprobadas ===");
-             lista.sort(ComparadoresEstudiante.porMaterias);
-         lista.forEach(System.out::println);
-       
+            lista.sort(ComparadoresEstudiante.porMaterias);
+            lista.forEach(System.out::println); 
+
+            System.out.println("\n=== Promedio descendente y nombre ===");
+lista.sort(ComparadoresEstudiante.porPromedioYNombre);
+lista.forEach(System.out::println);
+
+System.out.println("\n=== Promedio ascendente ===");
+lista.sort(ComparadoresEstudiante.porPromedioAsc);
+lista.forEach(System.out::println);
+
+System.out.println("\n=== Materias descendente y nombre ===");
+lista.sort(ComparadoresEstudiante.porMateriasDescYNombre);
+lista.forEach(System.out::println);
     }
 }

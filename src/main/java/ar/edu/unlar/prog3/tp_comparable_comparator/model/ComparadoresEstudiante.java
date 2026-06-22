@@ -18,5 +18,20 @@ public class ComparadoresEstudiante {
     // Method Reference: edad (ascendente)
     public static Comparator<Estudiante> porEdad =
             Comparator.comparing(Estudiante::getEdad);
+            // Promedio descendente y, si empatan, nombre ascendente
+public static Comparator<Estudiante> porPromedioYNombre =
+        Comparator.comparing(Estudiante::getPromedio)
+                .reversed()
+                .thenComparing(Estudiante::getNombre);
+
+// Promedio ascendente (a partir del anterior)
+public static Comparator<Estudiante> porPromedioAsc =
+        porPromedioYNombre.reversed();
+
+// Materias aprobadas descendente y nombre ascendente
+public static Comparator<Estudiante> porMateriasDescYNombre =
+        Comparator.comparing(Estudiante::getCantidadMateriasAprobadas)
+                .reversed()
+                .thenComparing(Estudiante::getNombre);
 
 }
